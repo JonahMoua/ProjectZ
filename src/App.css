@@ -1,4 +1,7 @@
 img {  
-    max-width: 100%;  
-    height: auto;  
+    float: left;
+    width:  245px;
+    height: 200px;
+    object-fit: cover;
+    border: 0;
     }  

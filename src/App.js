@@ -3,10 +3,9 @@ import './App.css'
 
 
 const Container = styled.div`
- width: 20%; 
  display: flex; 
- padding:0px; 
- margin:0px
+ padding: 0px; 
+ margin:25px 50px 75px 100px;
 `;
 
 const Column1 = styled.div`
