@@ -10,32 +10,26 @@ const Container = styled.div`
 
  const ServicesWrapper = styled.div`
  max-width: 1000px;
- margin: 0 auto;
+ margin: auto;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
- align-items: center;
  grid-gap: 16px;
- padding: 0 50px;
+ padding: 0;
  
  @media screen and (max-width: 1000px) {
-     grid-template-columns: 1fr 1fr;
+     grid-template-columns: 1fr;
+     max-width: 200px;
      }
  
- @media screen and (max-width: 768px) {
-     grid-template-columns: 1fr;
-     padding: 0 20px;
-     }
  `
 const Column = styled.div`
 background: #fff;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-align-items: center;
-border-radius: 10px;
-max-height: 340px;
+border-radius: 15px;
+max-height: 1000px;
 padding: 30px;
-transition: all 0.2s ease-in-out;
 `
 
 
