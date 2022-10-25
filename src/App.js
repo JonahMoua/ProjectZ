@@ -5,33 +5,39 @@ import './App.css'
 const Container = styled.div`
  display: inline; 
  padding: 0px; 
- margin: 25px 50px 75px 100px;
-
+ margin: auto;
  `;
 
-const Column1 = styled.div`
-grid-template-columns: auto auto auto auto;
-
-@media screen (max-width 768ox) {
-  flex-grow: unset;
- }
+ const ServicesWrapper = styled.div`
+ max-width: 1000px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ align-items: center;
+ grid-gap: 16px;
+ padding: 0 50px;
  
-`;
-const Column2 = styled.div`
-grid-template-columns: auto auto auto auto;
-
-@media screen (max-width 768ox) {
-  flex-grow: unset;
- }
+ @media screen and (max-width: 1000px) {
+     grid-template-columns: 1fr 1fr;
+     }
  
-`;
-const Column3 = styled.div`
-grid-template-columns: auto auto auto auto;
+ @media screen and (max-width: 768px) {
+     grid-template-columns: 1fr;
+     padding: 0 20px;
+     }
+ `
+const Column = styled.div`
+background: #fff;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+border-radius: 10px;
+max-height: 340px;
+padding: 30px;
+transition: all 0.2s ease-in-out;
+`
 
-@media screen (max-width 768ox) {
-  flex-grow: unset;
- }
-`;
 
 const Leo = styled.div`
 height: 150px;
@@ -110,24 +116,26 @@ padding: 25px 0;
 function App() {
   return (
     <Container>
-        <Column1>
+        <ServicesWrapper>
+        <Column>
           <Leo> <img src= {require("./images/leo.png")} alt= ""/></Leo>
           <Aries> <img src= {require("./images/aries.png")} alt= ""/> </Aries>
           <Taurus> <img src= {require("./images/taurus.png")} alt= ""/> </Taurus>
           <Gemini> <img src= {require("./images/gemini.png")} alt= ""/> </Gemini>
-        </Column1>
-        <Column2>
+        </Column>
+        <Column>
           <Cancer> <img src= {require("./images/cancer.png")} alt= ""/> </Cancer>
           <Virgo> <img src= {require("./images/virgo.png")} alt= ""/> </Virgo>
           <Libra> <img src= {require("./images/libra.png")} alt= ""/> </Libra>
           <Scorpius> <img src= {require("./images/scorpius.png")} alt= ""/> </Scorpius>
-        </Column2>
-        <Column3>
+        </Column>
+        <Column>
           <Sagittarius> <img src= {require("./images/sagittarius.png")} alt= ""/> </Sagittarius>
           <Capricornus> <img src= {require("./images/capricorn.png")} alt= ""/> </Capricornus>
           <Aquarius> <img src= {require("./images/aquarius.png")} alt= ""/> </Aquarius>
           <Pisces> <img src= {require("./images/pisces.png")} alt= ""/> </Pisces>
-        </Column3>
+        </Column>
+        </ServicesWrapper>
     </Container>
   );
 }
